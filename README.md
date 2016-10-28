@@ -12,6 +12,9 @@ Poweron in vmware, login and go root
 
 > sudo -i
 
+Setup wpa wifi
+> wpa_passphrase "YOUR_SSID" SSID_PASSWORD | sudo tee /etc/wpa_supplicant/wpa_supplicant.conf
+
 edit /etc/network/interfaces, add this:
 > vim /etc/network/interfaces
 
@@ -19,16 +22,7 @@ edit /etc/network/interfaces, add this:
 auto wlan0
 allow-hotplug wlan0
 iface wlan0 inet dhcp
-wpa-ssid TP-LINK_M7350_M41
-wpa-psk <your_wpa_key>
-```
-
-```
-auto wlan1
-allow-hotplug wlan1
-iface wlan1 inet dhcp
-wpa-ssid TP-LINK_M7350_M41
-wpa-psk <your_wpa_key>
+wpa-conf /etc/wpa_supplicant/wpa_supplicant.conf
 ```
 
 # Configure ssh
@@ -62,7 +56,7 @@ Do the crontab
 > crontab -e
 
 ```
-@reboot sh /root/eth-rig1/mine.sh &> /root/miner.log
+@reboot sh /root/eth-rig1/startup.sh &> /root/server.log
 ```
 
 # Convert VMDK to RAW
@@ -82,5 +76,5 @@ resize your partitions if needed with gparted
 plug the hardrive in the rig and poweron
 
 log in to your machine with 
-> ssh root@rig1
+> ssh root@192.168.0.2
 

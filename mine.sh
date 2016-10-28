@@ -1,8 +1,4 @@
-#!/bin/bash
-
-iwconfig wlan0 rate 11M
-
-iwconfig wlan1 rate 11M
+#!/bin/bash -x
 
 export GPU_FORCE_64BIT_PTR=0
 export GPU_MAX_HEAP_SIZE=100
