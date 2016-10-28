@@ -49,6 +49,9 @@ get the scripts
 install ethminer-genoil
 > chmod +x /root/eth-rig1/install_ethminer-genoil.sh && /root/eth-rig1/install_ethminer-genoil.sh
 
+review the startup script
+> chmod +x /root/eth-rig1/startup.sh && vim /root/eth-rig1/startup.sh
+
 review the mining script
 > chmod +x /root/eth-rig1/mine.sh && vim /root/eth-rig1/mine.sh
 
