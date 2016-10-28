@@ -1,14 +1,14 @@
 # Prepare the base OS
 
-### Create a new VM on vmware, linux Ubuntu64, 4CPUs, set up a 14Gb hard drive in a single file, do not launch the vm
+Create a new VM on vmware, linux Ubuntu64, 4CPUs, set up a 14Gb hard drive in a single file, do not launch the vm
 
-### Configure EFI support in vmware : VM > Settings > Options > Advanced, and check Boot with EFI instead of BIOS.
+Configure EFI support in vmware : VM > Settings > Options > Advanced, and check Boot with EFI instead of BIOS.
 
-### Install ubuntu 14.04.05, hostname=rig1 
+Install ubuntu 14.04.05, hostname=rig1 
 
 # Configuration for wifi connexion
 
-### Poweron in vmware, login and go root
+Poweron in vmware, login and go root
 
 > sudo -i
 
