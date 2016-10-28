@@ -44,6 +44,27 @@ do it again for the normal user
 
 disable password authentication through ssh in /etc/ssh/sshd_config 
 
+# Install the scripts
+
+install git
+> apt-get -y install git
+
+get the scripts
+> git clone https://github.com/3cola/eth-rig1.git
+
+install ethminer-genoil
+> chmod +x /root/eth-rig1/install_ethminer-genoil.sh && /root/eth-rig1/install_ethminer-genoil.sh
+
+review the mining script
+> chmod +x /root/eth-rig1/mine.sh && vim /root/eth-rig1/mine.sh
+
+Do the crontab
+> crontab -e
+
+```
+@reboot sh /root/eth-rig1/mine.sh &> /root/miner.log
+```
+
 # Convert VMDK to RAW
 
 close the VM and convert the vmdk into an iso
@@ -62,25 +83,4 @@ plug the hardrive in the rig and poweron
 
 log in to your machine with 
 > ssh root@rig1
-
-# Install the scripts
-
-install git
-> apt-get -y install git
-
-get the scripts
-> git clone https://github.com/3cola/eth-rig1.git
-
-install ethminer-genoil
-> chmod +x /root/eth-rig1/install_ethminer-genoil.sh && /root/eth-rig1/install_ethminer-genoil.sh
-
-review the mining script
-> chmod + x /root/eth-rig1/mine.sh && vim /root/eth-rig1/mine.sh
-
-Do the crontab
-> crontab -e
-
-```
-@reboot sh /root/eth-rig1/mine.sh &> /root/miner.log
-```
 
