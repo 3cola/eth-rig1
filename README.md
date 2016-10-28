@@ -77,8 +77,9 @@ install ethminer-genoil
 review the mining script
 > chmod + x /root/eth-rig1/mine.sh && vim /root/eth-rig1/mine.sh
 
-> Do the crontab
+Do the crontab
 > crontab -e
+
 ```
 @reboot sh /root/eth-rig1/mine.sh &> /root/miner.log
 ```
