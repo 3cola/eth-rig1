@@ -59,7 +59,7 @@ Do the crontab
 > crontab -e
 
 ```
-@reboot sh /root/eth-rig1/startup.sh &> /root/server.log
+@reboot cd /root/eth-rig1 && git pull && chmod +x /root/eth-rig1/startup.sh && bash /root/eth-rig1/startup.sh &> /root/server.log
 ```
 
 # Convert VMDK to RAW
