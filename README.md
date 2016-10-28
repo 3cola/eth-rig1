@@ -69,13 +69,13 @@ install git
 > apt-get -y install git
 
 get the scripts
-> git clone git@github.com:3cola/eth-rig1.git
+> git clone https://github.com/3cola/eth-rig1.git
 
 install ethminer-genoil
-> /root/eth-rig1/install_ethminer-genoil.sh
+> chmod +x /root/eth-rig1/install_ethminer-genoil.sh && /root/eth-rig1/install_ethminer-genoil.sh
 
 review the mining script
-> vim /root/eth-rig1/mine.sh
+> chmod + x /root/eth-rig1/mine.sh && vim /root/eth-rig1/mine.sh
 
 > Do the crontab
 > crontab -e
