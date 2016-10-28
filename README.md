@@ -47,19 +47,21 @@ get the scripts
 > git clone https://github.com/3cola/eth-rig1.git
 
 install ethminer-genoil
-> chmod +x /root/eth-rig1/install_ethminer-genoil.sh && /root/eth-rig1/install_ethminer-genoil.sh
+> bash /root/eth-rig1/install_ethminer-genoil.sh
 
 review the startup script
-> chmod +x /root/eth-rig1/startup.sh && vim /root/eth-rig1/startup.sh
+> vim /root/eth-rig1/startup.sh
+copy it to /root
+> cp /root/eth-rig1/startup.sh /root/startup.sh
 
 review the mining script
-> chmod +x /root/eth-rig1/mine.sh && vim /root/eth-rig1/mine.sh
+> vim /root/eth-rig1/mine.sh
 
 Do the crontab
 > crontab -e
 
 ```
-@reboot cd /root/eth-rig1 && git pull && chmod +x /root/eth-rig1/startup.sh && bash /root/eth-rig1/startup.sh &> /root/server.log
+@reboot bash /root/startup.sh &> /root/server.log
 ```
 
 # Convert VMDK to RAW
@@ -72,12 +74,12 @@ close the VM and convert the vmdk into an iso
 clone the iso to the disk
 > sudo dd if=/home/x41/vmware/Rig1/Rig1.iso of=/dev/sdb bs=32M conv=noerror,sync status=progress
 
-resize your partitions if needed with gparted
+resize your partitions and fix the errors with gparted
 
 # Let's turn it on !
 
 plug the hardrive in the rig and poweron
 
 log in to your machine with 
-> ssh root@192.168.0.2
+> ssh root@rig1
 
