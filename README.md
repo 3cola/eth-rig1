@@ -18,7 +18,9 @@ allow-hotplug wlan0
 iface wlan0 inet dhcp
 wpa-ssid TP-LINK_M7350_M41
 wpa-psk <your_wpa_key>
+```
 
+```
 auto wlan1
 allow-hotplug wlan1
 iface wlan1 inet dhcp
