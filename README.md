@@ -65,6 +65,9 @@ log in to your machine with
 
 # Install the scripts
 
+install git
+> apt-get -y install git
+
 get the scripts
 > git clone git@github.com:3cola/eth-rig1.git
 
